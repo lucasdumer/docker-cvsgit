@@ -3,6 +3,7 @@ FROM dockette/php:5.6
 WORKDIR lib
 
 RUN apt-get update && \
+    apt-get install -y vim && \
     apt-get install -y cvs && \
     apt-get install -y git && \
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \

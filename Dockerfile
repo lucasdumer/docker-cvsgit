@@ -10,4 +10,6 @@ RUN git clone https://github.com/cvsgit/php-client.git cvsgit && \
     composer install && \
     ln -f -s $(realpath bin/cvsgit) /usr/local/bin/
 
+RUN apt-get install cvs 
+
 ENTRYPOINT ["/bin/bash"]
